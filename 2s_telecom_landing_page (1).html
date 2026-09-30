@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2 Telecom - Soluções em TI e Telecomunicações</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#3b82f6', // blue-500
+                            DEFAULT: '#2563eb', // blue-600
+                            dark: '#1e3a8a', // blue-900
+                            gray: '#0f172a', // slate-900
+                        }
+                    },
+                    backgroundImage: {
+                        'tech-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for a tech feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand selection:text-white">
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-brand-gray/95 backdrop-blur-md border-b border-white/10 py-4 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-broadcast text-3xl text-brand-light"></i>
+                    <span class="font-bold text-2xl tracking-tight">S2<span class="text-brand-light">Telecom</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#servicos" class="text-sm font-medium hover:text-brand-light transition-colors">Nossos Serviços</a>
+                    <a href="#contato" class="bg-brand hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all shadow-lg shadow-brand/30 hover:shadow-brand/50">Fale Conosco</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="ph ph-list text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-gray border-t border-white/10 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="#servicos" class="block px-3 py-3 text-base font-medium text-white hover:bg-white/5 rounded-md">Nossos Serviços</a>
+                <a href="#contato" class="block px-3 py-3 text-base font-medium text-center bg-brand hover:bg-blue-700 text-white rounded-md mt-4">Fale Conosco</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
+        <!-- Background Pattern & Glow -->
+        <div class="absolute inset-0 bg-tech-pattern opacity-30"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand/30 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 lg:pr-12">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-brand-light text-xs font-semibold uppercase tracking-wide mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Sistemas Online & Operantes
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Conectividade de Alta Performance para o seu <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-cyan-400">Evento</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+                    Temos a melhor solução para você! Internet / links dedicados para garantir a operação: do seu credenciamento, PDVs, bares e transmissões ao vivo.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#servicos" class="bg-brand hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-lg shadow-brand/30 hover:shadow-brand/50 flex items-center justify-center gap-2">
+                        Nossos Serviços <i class="ph-bold ph-arrow-down"></i>
+                    </a>
+                    <a href="#contato" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold transition-all flex items-center justify-center">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 mt-16 lg:mt-0 relative hidden md:block">
+                <!-- Abstract Tech Illustration -->
+                <div class="relative w-full max-w-lg mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-dark to-brand-light rounded-2xl transform rotate-3 opacity-50 blur-lg"></div>
+                    <div class="relative bg-brand-gray border border-white/10 rounded-2xl p-6 shadow-2xl">
+                        <div class="flex justify-between items-center mb-6 border-b border-white/10 pb-4">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <span class="text-xs text-gray-400 font-mono">sys_monitor_v2.sh</span>
+                        </div>
+                        <div class="space-y-4 font-mono text-sm">
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="ph-fill ph-check-circle text-green-400"></i>
+                                <span>Inicializando infraestrutura de rede... OK</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="ph-fill ph-check-circle text-green-400"></i>
+                                <span>Estabelecendo links dedicados (PDV)... OK</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-gray-300">
+                                <i class="ph-fill ph-check-circle text-green-400"></i>
+                                <span>Configurando backup de transmissão... 100%</span>
+                            </div>
+                            <div class="mt-4 p-4 bg-brand-dark/50 rounded-lg border border-brand/30">
+                                <div class="flex justify-between text-xs text-brand-light mb-1">
+                                    <span>Uplink Status</span>
+                                    <span>Estável</span>
+                                </div>
+                                <div class="w-full bg-gray-800 rounded-full h-1.5">
+                                    <div class="bg-brand-light h-1.5 rounded-full w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 lg:py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand font-semibold tracking-wide uppercase text-sm mb-2">Nossas Especialidades</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Conectividade Especializada para Eventos</h3>
+                <p class="text-slate-600 text-lg">Garantimos que as operações críticas do seu evento funcionem perfeitamente, do início ao fim, com zero quedas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-blue-50 text-brand rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand group-hover:text-white transition-colors shadow-sm">
+                        <i class="ph ph-storefront text-4xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Link Dedicado para Eventos</h4>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        Internet 100% garantida para os sistemas que não podem parar. Foco total em agilidade nas vendas e validação de ingressos.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Credenciamento e Catracas ágeis</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Operação sem falhas em Bares e Restaurantes</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Máquinas de cartão (PDV) sempre online</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand/5 rounded-bl-full -z-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="w-16 h-16 bg-blue-50 text-brand rounded-2xl flex items-center justify-center mb-8 group-hover:bg-brand group-hover:text-white transition-colors shadow-sm">
+                        <i class="ph ph-broadcast text-4xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Link Backup para Transmissão</h4>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        Solução de contingência (failover) imediata. Se a internet principal oscilar, nosso link assume sem interromper sua live.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Estabilidade para Live Streaming e Broadcast</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Rotas independentes para máxima segurança</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700 font-medium"><i class="ph-fill ph-check-circle text-green-500 text-lg"></i> Alta taxa de upload garantida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 lg:py-32 bg-white relative border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-50 rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Contact Info -->
+                    <div class="lg:w-2/5 bg-brand-gray text-white p-10 lg:p-16 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-tech-pattern opacity-20"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-3xl font-bold mb-4">Fale Conosco</h3>
+                            <p class="text-gray-300 mb-10">
+                                Precisando de internet confiável para o seu evento? Fale com nossos especialistas e solicite um orçamento.
+                            </p>
+
+                            <div class="space-y-8">
+                                <div class="flex items-start gap-4">
+                                    <i class="ph ph-envelope-simple text-2xl text-brand-light mt-1"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg mb-1">E-mail</h4>
+                                        <p class="text-gray-400">contato@s2telecom.com.br</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:w-3/5 p-10 lg:p-16">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-slate-700 mb-2">Nome / Empresa</label>
+                                    <input type="text" id="nome" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all bg-white" placeholder="Seu nome ou empresa" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-slate-700 mb-2">E-mail</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all bg-white" placeholder="seu@email.com" required>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="servico" class="block text-sm font-medium text-slate-700 mb-2">Serviço de Interesse</label>
+                                <select id="servico" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all bg-white text-slate-600">
+                                    <option value="">Selecione uma opção...</option>
+                                    <option value="link-eventos">Link Dedicado (Credenciamento/Bares/PDV)</option>
+                                    <option value="link-backup">Link Backup para Transmissões</option>
+                                    <option value="ambos">Ambos os Serviços</option>
+                                    <option value="outros">Dúvida / Outros</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="mensagem" class="block text-sm font-medium text-slate-700 mb-2">Como podemos ajudar?</label>
+                                <textarea id="mensagem" rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-all bg-white resize-none" placeholder="Detalhe o seu evento (local, data, público esperado)..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-all shadow-lg shadow-brand/30 hover:shadow-brand/50">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2 text-white">
+                <i class="ph-fill ph-broadcast text-3xl text-brand-light"></i>
+                <span class="font-bold text-2xl tracking-tight">S2<span class="text-brand-light">Telecom</span></span>
+            </div>
+            
+            <div class="flex gap-6 text-sm">
+                <a href="#servicos" class="hover:text-brand-light transition-colors">Serviços</a>
+                <a href="#contato" class="hover:text-brand-light transition-colors">Fale Conosco</a>
+            </div>
+
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand hover:text-white transition-colors"><i class="ph-fill ph-whatsapp-logo text-xl"></i></a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-8 border-t border-slate-800 text-xs text-center">
+            <p>&copy; 2026 S2 Telecom. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Form override
+        const form = document.querySelector('form');
+        if (form) {
+            form.onsubmit = (e) => {
+                e.preventDefault();
+                
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl flex items-center gap-3 z-50 transform translate-y-20 opacity-0 transition-all duration-300';
+                toast.innerHTML = '<i class="ph-fill ph-check-circle text-green-400 text-2xl"></i><div><h4 class="font-bold">Mensagem Enviada!</h4><p class="text-sm text-gray-300">Entraremos em contato em breve.</p></div>';
+                
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-20', 'opacity-0');
+                }, 100);
+                
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                    setTimeout(() => toast.remove(), 300);
+                    form.reset();
+                }, 4000);
+            };
+        }
+    </script>
+</body>
+</html>
